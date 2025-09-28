@@ -33,7 +33,8 @@ detection_model = f"../../models/{config.autolabel.detection_model}"
 segmentation_model = f"../../models/{config.autolabel.segmentation_model}"
 SAM_model = config.autolabel.sam_model
 
-use_folder = config.autolabel.label_folder
+use_folder = config.autolabel.label_folder     #   <-------
+
 project_path = Path(f"../../autolabel/{use_folder}")
 data_path = project_path / "images"
 labels_dir = project_path / "labels"
