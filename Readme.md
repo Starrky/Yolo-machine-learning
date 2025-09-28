@@ -144,3 +144,29 @@ username=""
 ; password for the account
 password=""
 ```
+
+
+## label-studio: clean-json.py
+A simple script that takes the json export from label-studio and images, then cleans up the json so it can be used for data preparation for yolo model training( label studio locally just gives the weird path in json which is not accesible by yolo ( /data/local-files/?d= ). This probably can be moved to the main LS-prep.py and will work right off the bat for all-in-one solution.
+
+
+
+## label-studio: LS-prep.py
+Script used to prepare dataset for YOLO training from json export in Label Studio. 
+
+
+Put the ```images folder and data.json``` in same folder and name it, then set that name in ```PROJECT_NAME```.
+You can set the split of data between other folders: ```val, test and train```:
+```py
+VAL_FRACTION = 0.1   # 10% validation
+TEST_FRACTION = 0.1  # 10% test
+```
+
+Make sure to set:
+```
+PROJECT_NAME
+EXPORT_FILE
+IMAGES_DIR
+OUTPUT_DIR
+```
+After the run is completed, the dataset should be ready to train the yolo model.
