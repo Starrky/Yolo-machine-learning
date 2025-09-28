@@ -25,3 +25,4 @@
 /utils/r34-image-scrapper/images/
 /utils/subreddit-image-scraper/reddit_images/
 .idea
+.gitignore
