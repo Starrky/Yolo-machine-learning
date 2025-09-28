@@ -4,7 +4,7 @@ Python version 3.13
 
 ## Script was done and tested on Windows, the paths and functions might not work correctly in Linux and Mac.
 
-## Need to create:
+##Need to create:
 configs/project_config.yaml content:
 
 ```yaml
