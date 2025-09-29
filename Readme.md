@@ -76,7 +76,7 @@ After that, the data will be prepared in CVAT1.1 format in a foldername.zip read
 
 
 ### cvat_prep.py
-After exporting data from CVAT, and setting the variable use_dataset = config.project_settings.set_dataset . unpack the data.yaml and images + labels in it and then the script will prepare the data for yolo model training, it only moves the pairs( image + label with data) so if the image is missing label or label missing image, it won't be moved. 
+After exporting data from CVAT, and setting the variable use_dataset = config.project_settings.set_dataset . unpack the data.yaml and images + labels in it and then the script will prepare the data for yolo model training, it only moves the pairs( image + label with data) so if the image is missing label or label missing image, it won't be moved. Generally, just create a folder in datasets/folder , then set the folder as config.project_settings.set_dataset
 
 It also splits the dataset into 3: train, val, test and you can change the split inside 
 ```SPLIT_RATIO = (0.8, 0.1, 0.1) - 80% of data goes to train, 10% to val and 10% to test.``` Currently it only checks the train.txt so if you have data spread in CVAT in different categories like validation as well, it will need to be added ( probably will add soon). Then during model training that data will be just used to train.
@@ -128,7 +128,7 @@ Arguments you can use:
 ```
 Note: you can choose a list of subreddits and just separate them with comma, and no space after. It will download data to reddit_images/subbredit_name/ so the data will be separate for every query.
 
-redgifs_downloader.py needs to be in the same dir, it takes care of downloading e data from there- it runs automatically when you start reddit image scrapper.
+redgifs_downloader.py needs to be in the same dir, it takes care of downloading the data from there- it runs automatically when you start reddit image scrapper.
 
 For this you will also need to setup the reddit authorized app and grab name and api key : https://www.reddit.com/prefs/apps , set it up in the praw.ini
 ```ini
